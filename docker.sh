@@ -72,8 +72,8 @@ function update_script() {
 start
 build_container
 description
-msg_info "Registering container ${IP}"
-curl -X POST http://172.20.0.100:3001/api/lxc \
+msg_ok "Registering container ${IP}"
+curl -X POST http://172.20.0.40:3001/api/lxc \
   -H "Content-Type: application/json" \
   -d "{\"lxc_ip\":\"${IP}\",\"lxc_role\":\"${var_tags}\", \"lxc_status\":\"active\", \"lxc_compose_status\":\"active\" }"
 msg_ok "Completed successfully!\n"
