@@ -26,6 +26,8 @@ msg_ok "Installed Docker $DOCKER_LATEST_VERSION"
 
 
 
+
+
 socket="tcp://0.0.0.0:2375"
 
 if [[ -n "$socket" ]]; then
