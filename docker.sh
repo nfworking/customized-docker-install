@@ -73,9 +73,9 @@ start
 build_container
 description
 msg_info "Registering container ${IP}"
-curl -X POST http://172.20.0.100:3000/api/lxc \
+curl -X POST http://172.20.0.100:3001/api/lxc \
   -H "Content-Type: application/json" \
-  -d "{\"lxc_ip\":\"${IP}\",\"lxc_role\":\"${var_tags}\", \"lxc_status\":\"active\"}"
+  -d "{\"lxc_ip\":\"${IP}\",\"lxc_role\":\"${var_tags}\", \"lxc_status\":\"active\", \"lxc_compose_status\":\"active\" }"
 msg_ok "Completed successfully!\n"
 echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
 echo -e "${INFO}${YW} If you installed Portainer, access it at the following URL:${CL}"
